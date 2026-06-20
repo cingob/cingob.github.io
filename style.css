@@ -113,8 +113,20 @@ body {
   z-index: 1;
 }
 
+.hook {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.6vw, 1.5rem);
+  color: var(--ink);
+  max-width: 34rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
 .hero-sub {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--ink-soft);
   max-width: 36rem;
   margin: 0 0 1.75rem;
@@ -196,6 +208,12 @@ body {
   color: var(--ink-soft);
   max-width: 38rem;
   margin: 0 0 1.25rem;
+}
+
+.lede.beyond {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-top: -0.5rem;
 }
 
 /* ---- Subject grid ---- */
