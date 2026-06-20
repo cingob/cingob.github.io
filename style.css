@@ -50,22 +50,31 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 560px;
+  height: 640px;
   z-index: 0;
   pointer-events: none;
 }
 
 .contour {
   fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.1;
+  stroke: var(--ink);
+  stroke-width: 1.3;
 }
 
-.c1 { opacity: 0.16; animation: drift 46s linear infinite; }
-.c2 { opacity: 0.13; animation: drift 60s linear infinite reverse; }
-.c3 { opacity: 0.20; animation: drift 38s linear infinite; }
-.c4 { opacity: 0.12; animation: drift 54s linear infinite reverse; }
-.c5 { opacity: 0.16; animation: drift 42s linear infinite; }
+.contour.idx {
+  stroke-width: 2.2;
+  stroke: var(--accent-deep);
+}
+
+.c1 { opacity: 0.38; animation: drift 46s linear infinite; }
+.c2 { opacity: 0.34; animation: drift 60s linear infinite reverse; }
+.c3 { opacity: 0.40; animation: drift 38s linear infinite; }
+.c4 { opacity: 0.30; animation: drift 54s linear infinite reverse; }
+.c5 { opacity: 0.36; animation: drift 42s linear infinite; }
+.c6 { opacity: 0.28; animation: drift 50s linear infinite reverse; }
+.c7 { opacity: 0.34; animation: drift 36s linear infinite; }
+.c8 { opacity: 0.32; animation: drift 58s linear infinite reverse; }
+.c9 { opacity: 0.26; animation: drift 44s linear infinite; }
 
 @keyframes drift {
   from { transform: translateX(0); }
@@ -108,9 +117,30 @@ body {
   font-size: 1.15rem;
   color: var(--ink-soft);
   max-width: 36rem;
+  margin: 0 0 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  padding: 0;
   margin: 0 0 2.25rem;
   position: relative;
   z-index: 1;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin-right: 0.3rem;
 }
 
 .cta {
@@ -190,12 +220,133 @@ body {
   display: inline-block;
 }
 
+/* ---- Subject groups ---- */
+
+.subject-group {
+  margin-bottom: 1.75rem;
+}
+
+.group-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+
+.subject-grid {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.75rem;
+  border-radius: 2px;
+  display: inline-block;
+}
+
 .teaching-details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
+  margin-top: 0.5rem;
   border-top: 1px solid var(--line-soft);
+}
+
+/* ---- How it works ---- */
+
+.how-it-works {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.how-it-works li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--bg);
+  background: var(--accent-deep);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---- Contact form ---- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 28rem;
+  margin-top: 2rem;
+}
+
+.contact-form label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-top: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.65rem 0.75rem;
+  resize: vertical;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.form-note {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-top: 1.5rem;
+}
+
+.form-note a {
+  color: var(--accent-deep);
 }
 
 .detail-label {
