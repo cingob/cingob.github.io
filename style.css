@@ -481,3 +481,41 @@ body {
 .lang-switch a:hover {
   color: var(--accent-deep);
 }
+
+/* ---- Testimonials ---- */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--bg-alt);
+  border-left: 2px solid var(--accent-deep);
+}
+
+.testimonial p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+
+.testimonial cite {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
