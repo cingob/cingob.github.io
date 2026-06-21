@@ -447,3 +447,37 @@ body {
     height: 420px;
   }
 }
+
+.lede a,
+.timeline a {
+  color: var(--accent-deep);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.lede a:hover,
+.timeline a:hover {
+  color: var(--ink);
+}
+
+.lang-switch {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin: 0 0 2rem;
+}
+
+.lang-switch a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.lang-switch a.active {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.lang-switch a:hover {
+  color: var(--accent-deep);
+}
